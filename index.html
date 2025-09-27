@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <title>Chiyoda日本語の会「パセリ」</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 style="display: flex; align-items: center; gap: 0.5em; justify-content: center;">
+      <img src="assets/logo.png" alt="ロゴ" style="height:4em;">
+      <span>Chiyoda日本語の会「パセリ」</span>
+    </h1>
+    <p>～これから日本語！　もっと日本語！～</p>
+  </header>
+
+  <main>
+    <img src="assets/illustor.png" alt="音読のイメージ" class="main-image" style="width:360px; height:auto;margin-bottom: 0px;"/>
+    <section>
+      <h2>🌸<ruby>活動<rt>かつどう</rt></ruby> - Activity</h2>
+      <ul>
+        <li class="item-row"><span class="item-label label-size">Date</span><span class="item-value"><ruby>: 毎月<rt>まいつき</rt></ruby>第1<ruby>土曜日<rt>どようび</rt></ruby> (The first Saturday of every month)</span></li>
+        <li class="item-row"><span class="item-label label-size">Time</span><span class="item-value"><ruby>: 午前<rt>ごぜん</rt></ruby> 10:00 ～ 12:00</span></li>
+        <li class="item-row"><span class="item-label label-size">Place</span><span class="item-value">: 〒102-0074 <ruby>東京都<rt>とうきょうと</rt></ruby> <ruby>千代田区<rt>ちよだく</rt></ruby> <ruby>九段南<rt>くだんみなみ</rt></ruby> 1−6−10　かがやきプラザ　4F</span></li>
+        <li class="item-row"><span class="item-label label-size">Membership Fee</span><span class="item-value">: 500円／年 (500 yen per year)</span></li>
+      </ul>
+      <p class="yellow-text-shadow" style="margin-bottom:unset;">音読　と　会話　で　日本語を楽しみましょう！</p>
+      <p class="yellow-text-shadow" style="margin-top: unset;">Let's enjoy Japanese, "reading aloud and conversation!"</p>
+    </section>
+
+    <section>
+      <h2>📢 お<ruby>知<rt>し</rt></ruby>らせ - Announcement</h2>
+      <p style="text-align:left;"><strong>Opening Date:</strong> <strong style="color:#0074D9; font-size: 20px;"> 10月4日（<ruby>土曜日<rt>Saturday</rt></ruby>）AM 10:00 ～ 12:00</strong> です。</p>
+      <p style="font-size:1.1em; margin-top:1em; color:#2e8b57; margin-bottom: unset;">みなさんのご参加をお待ちしています！</p>
+      <p style="font-size:1em; margin-top:1em; color:#2e8b57; margin-top: unset; font-style: italic;">We look forward to your participation!</p>
+      <button id="applyBtn" class="apply-btn">申し込み<br>Registration</button>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <h3>申し込みフォーム</h3>
+          <form id="applyForm">
+            <label>お名前（Name）:<br><input type="text" name="name" required></label><br><br>
+            <label>国籍（Nationality）:<br>
+              <select name="nationality" required>
+                <option value="">選択してください / Please select</option>
+                <option value="日本">日本 / Japan</option>
+                <option value="中国">中国 / China</option>
+                <option value="韓国">韓国 / Korea</option>
+                <option value="ベトナム">ベトナム / Vietnam</option>
+                <option value="ネパール">ネパール / Nepal</option>
+                <option value="アメリカ">アメリカ / USA</option>
+                <option value="アメリカ">ミャンマー /Myanmar</option>
+                <option value="その他">その他 / Other</option>
+              </select>
+            </label><br><br>
+            <label>メールアドレス（Email）:<br><input type="email" name="email" required></label><br><br>
+            <label>メッセージ（Message）:<br><textarea name="message" rows="3"></textarea></label><br><br>
+            <button type="submit" class="apply-btn">送信</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>✉️ お<ruby>問<rt>と</rt></ruby>い<ruby>合<rt>あ</rt></ruby>わせ - Inquiry</h2>
+      <p>ご質問・参加希望は以下のメールアドレスまでご連絡ください。</p>
+      <p>If you have any questions or wish to participate, please contact us at the email address below.</p>
+      <p class="email-style">paseri.japanese@gmail.com</p>
+    </section>
+
+    <section>
+      <h2>🚃 <ruby>交通<rt>こうつう</rt></ruby>アクセス - Direction</h2>
+      <ul>
+        <li><ruby>最寄り駅<rt>Nearest Station</rt></ruby>：Kudanshita Station（Take Exit 4, turn right and walk for about 3 minutes.）</li>        
+      </ul>
+      <img src="assets/kagayaki-chizu_1.png" alt="地図" class="map-image"/>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 パセリ | 日本語ボランティアグループ</p>
+  </footer>
+  <script>
+    // モーダル表示
+    const applyBtn = document.getElementById('applyBtn');
+    const modal = document.getElementById('modal');
+    const closeModal = document.getElementById('closeModal');
+    applyBtn.onclick = () => { modal.style.display = 'block'; };
+    closeModal.onclick = () => { modal.style.display = 'none'; };
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+
+    // メール送信
+    document.getElementById('applyForm').onsubmit = function(e) {
+      e.preventDefault();
+      const name = this.name.value;
+      const nationality = this.nationality.value;
+      const email = this.email.value;
+      const message = this.message.value;
+      const subject = encodeURIComponent('パセリクラス申し込み');
+      const body = encodeURIComponent(`お名前: ${name}\n国籍: ${nationality}\nメール: ${email}\nメッセージ: ${message}`);
+      window.location.href = `mailto:paseri.japanese@gmail.com?subject=${subject}&body=${body}`;
+      modal.style.display = 'none';
+    };
+  </script>
+</body>
+</html>

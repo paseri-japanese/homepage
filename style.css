@@ -1,0 +1,177 @@
+/* ラベル幅を統一 */
+.label-size {
+  min-width: 8.5em;
+  display: inline-block;
+}
+/* ルビ（ふりがな）のサイズを大きく */
+ruby rt {
+  font-size: 10px;
+  color: #185a9d;
+  font-weight: bold;
+}
+/* 申し込みボタン */
+.apply-btn {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1em 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s;
+}
+.apply-btn:hover {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+}
+
+/* モーダル */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.3);
+}
+.modal-content {
+  background: #fff;
+  margin: 8% auto;
+  padding: 2em 2em 1em 2em;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  position: relative;
+  text-align: left;
+}
+.modal-content h3 {
+  margin-top: 0;
+  color: #185a9d;
+}
+.modal-content label {
+  font-size: 1em;
+  color: #185a9d;
+}
+.modal-content input, .modal-content textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.2em;
+  border: 1px solid #b2dfdb;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+.close {
+  position: absolute;
+  top: 0.7em;
+  right: 1em;
+  font-size: 2em;
+  color: #185a9d;
+  cursor: pointer;
+}
+/* 左寄せ */
+h2 {
+  text-align: left;
+}
+li {
+  text-align: left;
+}
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background-color: #fff;
+  color: #2b2b2b;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+header p {
+  font-family: 'Yu Mincho', 'HGP明朝E', 'MS Mincho', serif;
+  font-size: 1.5em;
+  color: #43a047;
+  text-shadow: 2px 2px 8px #b2ffb2, 0 0 2px #fff, 0 0 12px #43e97b;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5em 0 0 0;
+}
+
+.yellow-text-shadow {
+  font-size: 1.1em;
+  margin-top: 1em;
+  color: #2e8b57;
+  font-style: italic;
+  text-shadow: 2px 2px 8px #fff176, 0 0 2px #fff, 0 0 12px #ffeb3b;
+}
+
+.email-style {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2e8b57;
+  background: #f0fff0;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: aliceblue;
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2e8b57;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "🌱 ";
+}
+
+ul li {
+  margin-bottom: 3px;
+}
+
+a {
+  color: #2e8b57;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
