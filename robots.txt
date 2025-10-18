@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://paseri-japanese.github.io/homepage/sitemap.xml
