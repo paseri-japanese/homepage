@@ -97,11 +97,8 @@ header {
 }
 
 header p {
-  /* background-color: #FFD43B; */
   font-family: 'Yu Mincho', 'HGP明朝E', 'MS Mincho', serif;
   font-size: 1.5em;
-  /* color: #43a047; */
-  /* text-shadow: 2px 2px 8px #b2ffb2, 0 0 2px #fff, 0 0 12px #43e97b; */
   letter-spacing: 0.1em;
   font-weight: bold;
   text-align: left;
@@ -189,7 +186,7 @@ footer {
 }
 
 header .wrapper {  
-  display: flex;
+  display: flex;  
   flex-direction: column; /* ← 縦に並べる！ */
   align-items: center; /* 内容の左寄せ */
 }
@@ -197,7 +194,9 @@ header .wrapper {
 .foot-wrapper{
   display: flex;
   flex-direction: row; /* ← 縦に並べる！ */
-  align-items: center; /* 内容の左寄せ */
+  /*align-items: center;  内容の左寄せ */  
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .map-image {
@@ -209,8 +208,8 @@ header .wrapper {
   display: flex;          /* 横並びにする */
   justify-content: center;/* 中央寄せ */
   gap: 15px;              /* 画像の間隔 */
-  flex-wrap: wrap;        /* 画面が狭いときは自動で折り返す */
-  margin-top: 30px;
+  flex-wrap: wrap;       /* 画面が狭いときは自動で折り返す */
+  margin-top: 30px;  
 }
 
 .image-row .group-photo {
@@ -232,3 +231,14 @@ button ruby {
 button ruby rt {  
   color: white
 }
+
+/* 📱 Mobile Styles */
+    @media (max-width: 600px) {
+      header, footer {
+        font-size: 1rem;
+      }
+
+      main {
+        padding: 1rem;
+      }     
+    }
