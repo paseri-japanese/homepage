@@ -104,7 +104,7 @@ header p {
   /* text-shadow: 2px 2px 8px #b2ffb2, 0 0 2px #fff, 0 0 12px #43e97b; */
   letter-spacing: 0.1em;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   margin: 0.5em 0 0 0;
 }
 
@@ -181,13 +181,14 @@ footer {
   background-color: #ffeb3b;
   display: inline-block;  
   width: fit-content;
+  margin-top: 15px;
 }
 
 .group-name-style{
    color: #2e8b57;
 }
 
-header .wrapper {
+header .wrapper {  
   display: flex;
   flex-direction: column; /* ← 縦に並べる！ */
   align-items: center; /* 内容の左寄せ */
@@ -204,16 +205,30 @@ header .wrapper {
   height: auto;   /* アスペクト比（縦横比）を維持して高さを自動調整 */
 }
 
- .image-row {
-    display: flex;          /* 横並びにする */
-    justify-content: center;/* 中央寄せ */
-    gap: 15px;              /* 画像の間隔 */
-    flex-wrap: wrap;        /* 画面が狭いときは自動で折り返す */
-    margin-top: 30px;
-  }
+.image-row {
+  display: flex;          /* 横並びにする */
+  justify-content: center;/* 中央寄せ */
+  gap: 15px;              /* 画像の間隔 */
+  flex-wrap: wrap;        /* 画面が狭いときは自動で折り返す */
+  margin-top: 30px;
+}
 
-  .image-row .group-photo {
-    width: 300px;   /* 各画像の幅を指定 */
-    height: auto;   /* 比率を保つ */
-    border-radius: 10px; /* 角を丸く */
-  }
+.image-row .group-photo {
+  width: 300px;   /* 各画像の幅を指定 */
+  height: auto;   /* 比率を保つ */
+  border-radius: 10px; /* 角を丸く */
+}
+
+.title {
+  display: flex;
+  flex-direction: column; /* ← 縦に並べる */
+  align-items: center;     /* 中央寄せ */
+}
+
+button ruby {
+  font:white;
+}
+
+button ruby rt {  
+  color: white
+}
