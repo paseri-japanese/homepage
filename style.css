@@ -179,6 +179,7 @@ footer {
   display: inline-block;  
   width: fit-content;
   margin-top: 15px;
+  padding-left:20px;
 }
 
 .group-name-style{
