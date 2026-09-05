@@ -233,6 +233,35 @@ button ruby rt {
   color: white
 }
 
+ .practice-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+
+    .japanese {
+      width: 370px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .japanese::before {
+      content: "＊";
+      margin-right: 5px;
+    }
+
+    .english {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+
+
 /* 📱 Mobile Styles */
     /* @media (max-width: 600px) {
       header, footer {
