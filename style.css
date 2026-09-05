@@ -236,18 +236,18 @@ button ruby rt {
  .practice-list {
       max-width: 800px;
       margin: 0 auto;
+      text-align: left;
     }
 
     .item {
       display: flex;
       align-items: center;
-      margin-bottom: 35px;
+      margin-bottom: 10px;
     }
 
     .japanese {
-      width: 370px;
-      font-size: 24px;
-      font-weight: bold;
+      width: 300px;
+      font-size: 16px;      
     }
 
     .japanese::before {
@@ -256,11 +256,8 @@ button ruby rt {
     }
 
     .english {
-      font-size: 22px;
-      font-weight: bold;
+      font-size: 16px;     
     }
-
-
 
 /* 📱 Mobile Styles */
     /* @media (max-width: 600px) {
